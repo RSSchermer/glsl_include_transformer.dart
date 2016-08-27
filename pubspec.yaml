@@ -1,6 +1,6 @@
 name: glsl_include_transformer
 description: Transformer preprocessor for include directives in GLSL shader files.
-version: 0.1.0
+version: 0.1.1
 author: R.S. Schermer <roland0507@gmail.com>
 homepage: https://github.com/RSSchermer/glsl_include_transformer.dart
 documentation:
