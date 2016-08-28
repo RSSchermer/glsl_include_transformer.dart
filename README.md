@@ -4,10 +4,10 @@ Transformer preprocessor for `include` directives in `.glsl` shader files.
 
 [![Build Status](https://travis-ci.org/RSSchermer/glsl_include_transformer.dart.svg?branch=master)](https://travis-ci.org/RSSchermer/glsl_include_transformer.dart)
 
-C-style `include` preprocessor directives then allow you to reuse source 
-partials across multiple files. However, although OpenGL/WebGL implementations 
-support most C-style preprocessor directives, `include` is a notable exception. 
-This package adds support for `include` preprocessor directives through a Pub 
+C-style `include` preprocessor directives are a basic way to reuse code snippets
+across multitple files. However, although OpenGL/WebGL implementations support 
+most C-style preprocessor directives, `include` is a notable exception. This 
+package adds support for `include` preprocessor directives through a Pub 
 transformer that performs an additional preprocessing step at build time. 
 
 ## Usage
