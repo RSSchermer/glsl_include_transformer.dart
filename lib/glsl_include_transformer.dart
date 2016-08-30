@@ -1,5 +1,5 @@
 /// Transformer preprocessor for include directives in `.glsl` shader files.
-library scene_3d.build.glsl_include_transformer;
+library glsl_include_transformer;
 
 import 'dart:async';
 
