@@ -35,5 +35,15 @@ void main() {
       'a|lib/shaders/b.glsl': 'uniform vec3 test;',
       'a|lib/shaders/c.glsl': 'uniform vec3 test;'
     });
+
+    testPhases('preserves the newlines around an include directive', [
+      [new GlslIncludeTransformer()]
+    ], {
+      'a|lib/shaders/a.glsl': 'uniform float a;\n#include "partials/b.glsl"\nuniform float c;',
+      'a|lib/shaders/partials/b.glsl': 'uniform float b;'
+    }, {
+      'a|lib/shaders/a.glsl': 'uniform float a;\nuniform float b;\nuniform float c;',
+      'a|lib/shaders/partials/b.glsl': 'uniform float b;'
+    });
   });
 }

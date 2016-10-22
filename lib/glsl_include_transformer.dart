@@ -37,7 +37,8 @@ import 'package:source_span/source_span.dart';
 /// You may only reference files in another package's `lib` directory. Note that
 /// URIs that reference another package should not contain a `lib` segment.
 class GlslIncludeTransformer extends Transformer {
-  final RegExp _pattern = new RegExp(r"""\s*#\s*include\s+["\<](.*)["\>]\s*""");
+  final RegExp _pattern =
+      new RegExp(r"""[^\S\n]*#[^\S\n]*include[^\S\n]+["\<](.*)["\>][^\S\n]*""");
 
   GlslIncludeTransformer();
 
